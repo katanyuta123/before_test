@@ -1,4 +1,5 @@
-import 'package:before_test/pages/game/game_page.dart';
+//import 'package:before_test/pages/game/game_page.dart';
+import 'package:before_test/pages/showbox.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: GamePage(),
+      home: ShowBox(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:before_test/game.dart';
 import 'package:flutter/material.dart';
-// ignore_for_file: prefer_const_constructors
+//ignore_for_file: prefer_const_constructors
 
 class GamePage extends StatefulWidget {
   const GamePage({Key? key}) : super(key: key);
@@ -32,7 +32,8 @@ class _GamePageState extends State<GamePage> {
 
     var boxList = <Widget>[];
     //boxList.add(pinkBox); ใส่แบบทีล่ะอัน
-    for(var i= 0;i<_boxCount;i++){  //ใส่แบบทีเดียว 10 ครั้ง
+    for (var i = 0; i < _boxCount; i++) {
+      //ใส่แบบทีเดียว 10 ครั้ง
       boxList.add(pinkBox);
     }
     return Scaffold(
@@ -66,8 +67,7 @@ class _GamePageState extends State<GamePage> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: _showbox ? boxList :[], //ถ้า_showbox เป็น true -> boxList เป็นช่องว่าง
-
+                    children: _showbox? boxList: [], //ถ้า_showbox เป็น true -> boxList เป็นช่องว่าง
                   ),
 
                   //ElevatedButton(onPressed: () {}, child: Text('A')),
@@ -131,7 +131,9 @@ class _GamePageState extends State<GamePage> {
                       ),
                     ),
                   ),
-                  OutlinedButton( //กดปุ่มเทสแล้วกล่องเพิ่มทีล่ะ 1
+
+                  OutlinedButton(
+                    //กดปุ่มเทสแล้วกล่องเพิ่มทีล่ะ 1
                     onPressed: () {
                       setState(() {
                         _boxCount++;
@@ -140,12 +142,12 @@ class _GamePageState extends State<GamePage> {
                     },
                     child: Text('TEST'),
                   ),
-                  OutlinedButton( //กดปุ่มแล้วกล่องหาย,กดอีกทีกลับมา
+                  OutlinedButton(
+                    //กดปุ่มแล้วกล่องหาย,กดอีกทีกลับมา
                     onPressed: () {
                       setState(() {
-                       _showbox = !_showbox;
+                        _showbox = !_showbox;
                       });
-
                     },
                     child: Text('TOGGLE'),
                   ),
@@ -155,7 +157,6 @@ class _GamePageState extends State<GamePage> {
               ),
             ),
             Text(_feedbackText),
-
           ],
         ),
       ),
